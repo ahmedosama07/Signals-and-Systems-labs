@@ -20,5 +20,3 @@ if S == 1
     disp('Consistent');
     X = linsolve(A,B);
 end
-A
-X
