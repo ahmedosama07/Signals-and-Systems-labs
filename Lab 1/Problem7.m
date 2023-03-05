@@ -16,7 +16,7 @@ rankA = rank(A);
 rank_augA = rank(augA);
 S = rankA == 5;
  
-if S == 1
-    disp('Consistent');
+if (rankA == rank_augA) && (S == 1)
+    disp('Unique Solution');
     X = linsolve(A,B);
 end
