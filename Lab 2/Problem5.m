@@ -12,12 +12,24 @@ end
 figure('Name','problem 5');
 subplot(4,1,1);
 stem(n,x);
+xlabel('n');
+ylabel('x[n]');
+title('x[n]');
 
 subplot(4,1,2);
 stem(n,x1);
+xlabel('n');
+ylabel('x1[n]');
+title('x1[n]');
 
 subplot(4,1,3);
 stem(n,x2);
+xlabel('n');
+ylabel('x2[n]');
+title('x2[n]');
 
 subplot(4,1,4);
 stem(n,x3);
+xlabel('n');
+ylabel('x3[n]');
+title('x3[n]');
