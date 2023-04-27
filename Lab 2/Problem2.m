@@ -6,6 +6,7 @@ y2 = (1 ./ ((t - 1).^2)) + t;
 y3 = ((t.^2) + 1) ./ ((t.^2) - 4);
 y4 = (nthroot((10 - t), 3) - 2) ./ sqrt(4 - (t.^2));
 
+figure('Name','problem 2');
 subplot(4,1,1);
 plot(t,y1);
 subplot(4,1,2); 
