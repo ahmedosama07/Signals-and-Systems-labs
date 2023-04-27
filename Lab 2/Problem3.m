@@ -13,7 +13,7 @@ x_2 = sin(2*pi*Fo_2.*t);
 x_3 = sin(2*pi*Fo_3.*t);
 x_45 = sin(2*pi*Fo_45.*t);
 
-figure(1);
+figure('Name','problem 3 part 1');
 subplot(4,1,1);
 stem(t,x_05);
 subplot(4,1,2);
@@ -34,7 +34,7 @@ t2 = t1(2:2:100);
 x = sin(2*pi*Fo.*t1);
 y = x(2:2:100);
 
-figure(2);
+figure('Name','problem 3 part 2');
 subplot(2, 1, 1);
 stem(t1,x);
 subplot(2, 1, 2);
