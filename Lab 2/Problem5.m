@@ -9,7 +9,7 @@ x3 = zeros(1, length(x));
 for k = 1 : 1 : 5
     x3 = x3 + n .* [zeros(1,k) x(1:length(x) - k)];
 end
-figure(1);
+figure('Name','problem 5');
 subplot(4,1,1);
 stem(n,x);
 
