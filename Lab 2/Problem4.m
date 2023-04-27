@@ -11,19 +11,23 @@ figure('Name','problem 4');
 subplot(4,1,1);
 stem(n,Xn);
 xlabel('n');
-ylabel('x(n)');
+ylabel('x[n]');
+title('x[n]');
 
 subplot(4,1,2);
 plot(t,Xt);
 xlabel('t');
-ylabel('x(t)');
+ylabel('x[t]');
+title('x[t]');
 
 subplot(4,1,3);
 stem(n,Yn);
 xlabel('n');
-ylabel('y(n)');
+ylabel('y[n]');
+title('y[n]');
 
 subplot(4,1,4);
 plot(t,Yt);
 xlabel('t');
-ylabel('y(t)');
+ylabel('y[t]');
+title('y[t]');
