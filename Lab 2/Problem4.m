@@ -7,6 +7,7 @@ Xt = cos((2.*t)./3);
 Yn = cos((8.*pi.*n)./38);
 Yt = cos((8.*pi.*t)./38);
 
+figure('Name','problem 4');
 subplot(4,1,1);
 stem(n,Xn);
 xlabel('n');
