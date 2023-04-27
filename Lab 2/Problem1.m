@@ -13,3 +13,6 @@ plot(t,x);
 ylim([0 6]);
 xticks(-2:1:3);
 grid();
+xlabel('t');
+ylabel('x[t]');
+title('x[t]');
