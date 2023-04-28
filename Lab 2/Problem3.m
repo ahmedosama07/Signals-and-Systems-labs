@@ -33,9 +33,9 @@ ylabel('x[n]');
 title('F_0 = 3kHz');
 
 subplot(4,1,4);
-stem(t,x_4_5);
-xlabel('t');
-ylabel('x[t]');
+stem(n,x_4_5);
+xlabel('n');
+ylabel('x[n]');
 title('F_0 = 4.5kHz');
 %% Part 2
 Fs2 = 50e3;
