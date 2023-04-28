@@ -4,4 +4,3 @@ function d = delta(n)
 d = dirac(n);
 d(d==Inf)=1;
 end
-
