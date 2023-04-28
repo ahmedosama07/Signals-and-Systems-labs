@@ -6,8 +6,6 @@ n4 = 0:19;
 x1 = zeros(size(n1));
 for m = 0 : 10
     x1 = x1 + (m + 1) .* (delta(n1 - 2*m) - delta(n1 - 2*m - 1));
-    x1(x1==Inf)=m+1;
-    x1(x1==-Inf)=-(m+1);
 end
 
 x2 = (n2 .^ 2) .* (unit(n2 + 5) - unit(n2 - 6)) + 10 * delta(n2) + 20 * (0.5 .^ n2) .* (unit(n2 - 4) - unit(n2 - 10));
