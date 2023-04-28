@@ -1,7 +1,7 @@
 n1 = 0:25;
 n2 = -5:10;
 n3 = 0:20;
-n4 = 0:20;
+n4 = 0:19;
 
 x1 = zeros(size(n1));
 for m = 0 : 10
@@ -15,7 +15,7 @@ x2 = (n2 .^ 2) .* (unit(n2 + 5) - unit(n2 - 6)) + 10 * delta(n2) + 20 * (0.5 .^ 
 x3 = (0.9 .^ n3) .* cos(0.2 * pi .* n3 + pi / 3);
 
 x4_period = [1, 2, 3, 2];
-x4 = [repmat(x4_period, 1, 5) 1];
+x4 = repmat(x4_period, 1, 5);
 
 figure('Name','problem 6');
 subplot(4,1,1);
@@ -41,4 +41,3 @@ stem(n4,x4);
 xlabel('n');
 ylabel('x4[n]');
 title('x4[n]');
-
