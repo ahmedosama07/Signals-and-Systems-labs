@@ -1,11 +1,12 @@
-n = linspace(-40,40,20);
+Ts = 2;
+n = -20 : 20;
 t = linspace(-40,40);
 
-Xn = cos((2.*n)./3);
-Xt = cos((2.*t)./3);
+Xn = cos((Ts.*n)./3);
+Xt = cos((1.*t)./3);
 
-Yn = cos((8.*pi.*n)./38);
-Yt = cos((8.*pi.*t)./38);
+Yn = cos((4 .* Ts .*pi.*n)./38);
+Yt = cos((4.*pi.*t)./38);
 
 figure('Name','problem 4');
 subplot(4,1,1);
