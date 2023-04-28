@@ -1,17 +1,19 @@
 x = [1,-2,4,6,-5,8,10];
-n = -4:2;
+n = -8:7;
+L = 4;
+R = 5;
+X = [zeros(1, L) x zeros(1, R)];
+x1 = 3 .* [zeros(1, L-2) x zeros(1,R+2)] + [zeros(1,L+4) x zeros(1,R-4)] + 2 .* X;
+x2 = [zeros(1, L-4) x zeros(1,R+4)] .* [zeros(1,L+1) x zeros(1, R-1)] + [zeros(1,R+1+2) x(end:-1:1) zeros(1,L-1-2)] .* X;
 
-x1 = 3 .* [x(3:end) zeros(1,2)] + [zeros(1,4) x(1:3)] + 2 .* x;
-x2 = [x(5:end) zeros(1,4)] .* [zeros(1,1) x(1:6)] + [zeros(1,2) x(end:-1:3)];
-
-x3 = zeros(1, length(x));
+x3 = zeros(1, length(X));
 
 for k = 1 : 1 : 5
-    x3 = x3 + n .* [zeros(1,k) x(1:length(x) - k)];
+    x3 = x3 + n .* [zeros(1,L+k) x zeros(1,R-k)];
 end
 figure('Name','problem 5');
 subplot(4,1,1);
-stem(n,x);
+stem(n,X);
 xlabel('n');
 ylabel('x[n]');
 title('x[n]');
