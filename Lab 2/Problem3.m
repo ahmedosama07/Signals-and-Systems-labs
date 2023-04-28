@@ -15,19 +15,19 @@ x_4_5 = sin(2*pi*Fo_4_5.*t);
 
 figure('Name','problem 3 part 1');
 subplot(4,1,1);
-stem(t,x_05);
+stem(n,x_05);
 xlabel('n');
 ylabel('x[n]');
 title('F_0 = 0.5kHz');
 
 subplot(4,1,2);
-stem(t,x_2);
+stem(n,x_2);
 xlabel('n');
 ylabel('x[n]');
 title('F_0 = 2kHz');
 
 subplot(4,1,3);
-stem(t,x_3);
+stem(n,x_3);
 xlabel('n');
 ylabel('x[n]');
 title('F_0 = 3kHz');
@@ -42,21 +42,21 @@ Fs2 = 50e3;
 
 Fo = 2e3;
 
-t1 = n./Fs2;
-t2 = t1(2:2:100);
+t1 = n/Fs2;
+n2 = n(1:2:end);
 
 x = sin(2*pi*Fo.*t1);
-y = x(2:2:100);
+y = x(1:2:end);
 
 figure('Name','problem 3 part 2');
 subplot(2, 1, 1);
-stem(t1,x);
+stem(n,x);
 xlabel('n');
 ylabel('x[n]');
 title('x[n]');
 
 subplot(2, 1, 2);
-stem(t2,y);
+stem(n2,y);
 xlabel('n');
 ylabel('y[n]');
 title('y[n]');
