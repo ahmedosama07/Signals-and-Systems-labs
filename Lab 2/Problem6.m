@@ -5,12 +5,12 @@ n4 = 0:20;
 
 x1 = zeros(size(n1));
 for m = 0 : 10
-    x1 = x1 + (m + 1) .* (dirac(n1 - 2*m) - dirac(n1 - 2*m - 1));
+    x1 = x1 + (m + 1) .* (delta(n1 - 2*m) - delta(n1 - 2*m - 1));
     x1(x1==Inf)=m+1;
     x1(x1==-Inf)=-(m+1);
 end
 
-x2 = (n2 .^ 2) .* (heaviside(n2 + 5) - heaviside(n2 - 6)) + 10 * dirac(n2) + 20 * (0.5 .^ n2) .* (heaviside(n2 - 4) - heaviside(n2 - 10));
+x2 = (n2 .^ 2) .* (unit(n2 + 5) - unit(n2 - 6)) + 10 * delta(n2) + 20 * (0.5 .^ n2) .* (unit(n2 - 4) - unit(n2 - 10));
 
 x3 = (0.9 .^ n3) .* cos(0.2 * pi .* n3 + pi / 3);
 
@@ -41,3 +41,4 @@ stem(n4,x4);
 xlabel('n');
 ylabel('x4[n]');
 title('x4[n]');
+
