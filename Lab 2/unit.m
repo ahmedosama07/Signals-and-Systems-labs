@@ -4,4 +4,3 @@ function u = unit(n)
 u = heaviside(n);
 u(u>0)=1;
 end
-
